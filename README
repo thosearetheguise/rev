@@ -1,0 +1,3 @@
+This code was created by following on from https://scriptdotsh.com/index.php/2018/09/04/malware-on-steroids-part-1-simple-cmd-reverse-shell/. I've taken some liberties and added some stuff like:
+
+Really crappy randomness for the beacon and a timeout after X beacons to stop the thing running if something goes wrong. Also, I haven't tested that because I wasn't patient enough. 
