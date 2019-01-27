@@ -9,6 +9,14 @@ To compile on Kali
 ```
 apt install mingw-w64-i686-dev
 apt install mingw-w64
-i686-w64-mingw32-g++ rev.c -o rev.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc
+i686-w64-mingw32-g++ rev.c -o build/rev.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -DIP=\"10.10.10.10\" -DPORT=8080
 ```
+I've moved the IP address out of the source file into the -D switch. 
+
 Or use the makefile (you still need to install the require stuff from above.)
+
+```
+make ATTK_HOST=10.10.10.10 ATTK_PORT=8080
+```
+
+To compile in windows install visual studio community and hunt down cl.exe, and the .bat files to set up the env vars (google around, I can't be bothered...)
