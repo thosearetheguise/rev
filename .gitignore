@@ -56,3 +56,5 @@ build/
 
 #Python guff
 env/
+poc.py
+.idea/

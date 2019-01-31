@@ -8,7 +8,11 @@ pip install wheel
 pip install -r requirements.txt
 ```
 
+And to run:
 
+```bash
+python autopwn.py <local IP> <local port>
+```
 
 This code was created by following on from https://scriptdotsh.com/index.php/2018/09/04/malware-on-steroids-part-1-simple-cmd-reverse-shell/. I've taken some liberties and added some stuff like:
 
